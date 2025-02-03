@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/stylesheets/userRegister.css">
+</head>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+    <div class = wrapper>
+        <div class="heading">USER SIGNUP</div>
+        <div class="Message"></div>
+        <form action = '/api/v1/user/register' method="POST"> 
+            <label for="username">Username</label>
+            <input type="text" name = "username" id="username" required>
+            <label for="email">Email</label>
+            <input type="text" name = "email" id="email" required>
+            <label for="password">Password</label>
+            <input type="password" name = "password" id="password" required>
+            <label for="confPassword">Confirm Password</label>
+            <input type="password" name = "confPassword" id = "confPassword" required>
+            <input type="submit" id="submit" value = "SIGN UP">
+        </form>
+    </div>
+    <script src="/scripts/register.js" type = "module">
+
+        
+    </script>
+</body>
+</html>

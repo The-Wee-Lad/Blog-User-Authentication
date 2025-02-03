@@ -1,0 +1,26 @@
+
+        body { 
+            font-family: Arial, sans-serif; margin: 0; 
+        }
+        .navbar {  display :flex; justify-content: space-between; align-items: center; background-color: azure; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0px;
+            z-index: 100;
+        }
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo { height: 40px; }
+        .logo-text { font-size: 24px; font-weight: bold; color: #1E40AF; text-decoration: none; }
+        .nav-links { display: flex; gap: 15px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #333; padding: 8px 12px; transition: 0.3s; }
+        .nav-links a:hover { color: #2e55d3; background-color: antiquewhite; border-radius: 10px;}
+        .login{ background: #22cb98; color: white; padding: 8px 12px; border-radius: 10px; }
+        .signup { background: #324b9e; color: white; padding: 8px 12px; border-radius: 10px; }
+        .menu-toggle { display: none; cursor: pointer; font-size: 24px; background: none; border: none; }
+        .nav-links.active { display: flex; row-gap: 5px;}
+        .nav-links a.login:hover{ color: #f0f0f0; background-color: #f0f0f0;}
+        .nav-links a.signup:hover{color: #22cb98;background-color: #f0f0f0;}
+        
+        @media (max-width: 768px) {
+            .nav-links { padding-top: 10px; padding-bottom: 10px; display: none; flex-direction: column; position: absolute; top: 60px; right: 20px; background: white; width: 200px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); border-radius: 5px; }
+            .nav-links a { padding: 10px 15px; display: block; }
+            .nav-links a:hover { background-color: antiquewhite;  }
+            .menu-toggle { display: block; }
+        }
